@@ -1,11 +1,13 @@
 import eslint from "@eslint/js";
+import eslintConfigPrettier from "eslint-config-prettier";
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import eslintPluginAstro from "eslint-plugin-astro";
 import tailwind from "eslint-plugin-tailwindcss";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-    ignores: ["node_modules/*", "dist/*", ".astro"],
+    ignores: ["node_modules/*", "dist/*"],
   },
   ...eslintPluginAstro.configs["flat/recommended"],
   {
@@ -33,7 +35,7 @@ export default tseslint.config(
     settings: {
       tailwindcss: {
         callees: ["cn", "cva"],
-        config: "tailwind.config.cjs",
+        config: "tailwind.config.mjs",
       },
     },
     rules: {
@@ -45,5 +47,7 @@ export default tseslint.config(
       ],
       "tailwindcss/no-custom-classname": "off",
     },
-  }
+  },
+  eslintConfigPrettier,
+  eslintPluginPrettierRecommended,
 );

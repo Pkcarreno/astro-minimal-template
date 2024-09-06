@@ -22,8 +22,12 @@
   "packageManager": "pnpm@9.9.0+sha256.7a4261e50d9a44d9240baf6c9d6e10089dcf0a79d0007f2a26985a6927324177",
   "devDependencies": {
     "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^1.2.3",
+    "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-tailwindcss": "^3.17.4",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
     "typescript-eslint": "^8.4.0"
   }
 }
