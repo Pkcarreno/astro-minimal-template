@@ -8,6 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "type-check": "tsc --project tsconfig.json --noEmit",
     "lint": "eslint --max-warnings=0"
   },
   "dependencies": {
