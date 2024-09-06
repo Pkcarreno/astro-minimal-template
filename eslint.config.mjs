@@ -4,6 +4,9 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 import eslintPluginAstro from "eslint-plugin-astro";
 import tailwind from "eslint-plugin-tailwindcss";
 import tseslint from "typescript-eslint";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
+import unusedImports from "eslint-plugin-unused-imports";
 
 export default tseslint.config(
   {
@@ -28,6 +31,65 @@ export default tseslint.config(
       "@typescript-eslint/consistent-type-imports": "error",
       "@typescript-eslint/no-unused-vars": "off",
       "@typescript-eslint/triple-slash-reference": "off",
+    },
+  },
+  {
+    files: [
+      "src/components/**/*.{astro,js,jsx,ts,tsx}",
+      "src/layouts/**/*.{astro,js,jsx,ts,tsx}",
+    ],
+    plugins: {
+      unicorn: eslintPluginUnicorn,
+    },
+    rules: {
+      "unicorn/filename-case": [
+        "error",
+        {
+          case: "pascalCase",
+        },
+      ],
+    },
+  },
+  {
+    ignores: [
+      "src/components/**/*.{astro,js,jsx,ts,tsx}",
+      "src/layouts/**/*.{astro,js,jsx,ts,tsx}",
+    ],
+    plugins: {
+      unicorn: eslintPluginUnicorn,
+    },
+    rules: {
+      "unicorn/filename-case": [
+        "error",
+        {
+          case: "kebabCase",
+        },
+      ],
+    },
+  },
+  {
+    plugins: {
+      "simple-import-sort": simpleImportSort,
+    },
+    rules: {
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
+    },
+  },
+  {
+    plugins: {
+      "unused-imports": unusedImports,
+    },
+    rules: {
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+        },
+      ],
     },
   },
   ...tailwind.configs["flat/recommended"],
