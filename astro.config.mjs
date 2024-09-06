@@ -10,4 +10,3 @@ export default defineConfig({
   site: "https://dresnerca.com",
   integrations: [tailwind(), sitemap()],
 });
-
