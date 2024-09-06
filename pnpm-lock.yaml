@@ -23,9 +23,6 @@ importers:
       tailwindcss:
         specifier: ^3.4.10
         version: 3.4.10
-      typescript:
-        specifier: ^5.5.4
-        version: 5.5.4
     devDependencies:
       '@astrojs/ts-plugin':
         specifier: ^1.10.2
@@ -51,6 +48,9 @@ importers:
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
       typescript-eslint:
         specifier: ^8.4.0
         version: 8.4.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.5.4)
