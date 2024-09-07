@@ -1,0 +1,22 @@
+---
+import "@/styles/global.css";
+
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"body"> & {
+  lang?: "es" | "en" | string;
+};
+
+const { title, lang = "es", ...props } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <title>{title}</title>
+    <meta charset="utf-8" />
+  </head>
+  <body {...props}>
+    <slot />
+  </body>
+</html>

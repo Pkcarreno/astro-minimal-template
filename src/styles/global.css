@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 100% 96%;
+    --foreground: 31 58% 5%;
+    --muted: 31 14% 94%;
+    --muted-foreground: 31 10% 29%;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: 45 100% 4%;
+      --foreground: 31 39% 98%;
+      --muted: 31 14% 10%;
+      --muted-foreground: 31 10% 71%;
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground selection:bg-foreground selection:text-background font-sans box-border;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+}
