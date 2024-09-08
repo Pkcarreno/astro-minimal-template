@@ -4,18 +4,18 @@
 
 @layer base {
   :root {
-    --background: 45 100% 96%;
-    --foreground: 31 58% 5%;
-    --muted: 31 14% 94%;
-    --muted-foreground: 31 10% 29%;
+    --background: 98.46% 0.020808140313168765 91.58194009960602;
+    --foreground: 16.59% 0.02 70.51;
+    --muted: 95.54% 0.004 69.61;
+    --muted-foreground: 41.44% 0.016 69.24;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background: 45 100% 4%;
-      --foreground: 31 39% 98%;
-      --muted: 31 14% 10%;
-      --muted-foreground: 31 10% 71%;
+      --background: 17.12% 0.035 95.39;
+      --foreground: 98.59% 0.003 69.62;
+      --muted: 21.87% 0.009 69.2;
+      --muted-foreground: 77.77% 0.013 69.47;
     }
   }
 }
@@ -25,5 +25,13 @@
     @apply bg-background text-foreground selection:bg-foreground selection:text-background font-sans box-border;
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
+  }
+
+  a {
+    @apply underline underline-offset-2 hover:text-muted-foreground;
+  }
+
+  a.link.is-active {
+    @apply bg-muted text-muted-foreground decoration-solid hover:text-muted-foreground/70;
   }
 }
