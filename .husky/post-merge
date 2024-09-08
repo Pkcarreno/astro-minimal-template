@@ -1,0 +1,24 @@
+function changed {
+	git diff --name-only HEAD@{1} HEAD | grep "^$1" >/dev/null 2>&1
+}
+
+function exist {
+    [ ! -f "$1" ]
+}
+
+echo 'Checking for changes in lock file...'
+
+if exist 'pnpm-lock.yml' && changed 'pnpm-lock.yml'; then
+	echo "📦 pnpm-lock.yml changed. Run pnpm install to bring your dependencies up to date."
+	pnpm install
+elif exist 'yarn.lock' && changed 'yarn.lock'; then
+	echo "📦 yarn.lock changed. Run yarn install to bring your dependencies up to date."
+	yarn install
+elif exist 'package-lock.json' && changed 'package-lock.json'; then
+	echo "📦 package-lock.json changed. Run npm install to bring your dependencies up to date."
+	npm install
+fi
+
+echo 'You are up to date :)'
+
+exit 0
