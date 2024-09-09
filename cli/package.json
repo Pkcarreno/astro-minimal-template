@@ -2,6 +2,7 @@
   "name": "@pkcarreno/create-astro-minimal",
   "version": "1.0.0",
   "description": "Astro minimal template starter cli",
+  "private": false,
   "homepage": "https://github.com/Pkcarreno/astro-minimal-template",
   "repository": {
     "type": "git",
