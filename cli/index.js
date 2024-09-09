@@ -101,7 +101,7 @@ const installDeps = async (projectPath) => {
 
 async function removeFiles(projectPath) {
   FILES_TO_REMOVE.forEach((file) => {
-    fs.removeSync(path.join(process.cwd(), `${projectPath}/${file}`));
+    fs.removeSync(path.join(projectPath, file));
   });
 }
 
