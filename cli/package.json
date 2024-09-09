@@ -1,18 +1,29 @@
 {
   "name": "@pkcarreno/create-astro-minimal",
   "version": "1.0.0",
-  "description": "",
+  "description": "Astro minimal template starter cli",
+  "homepage": "https://github.com/Pkcarreno/astro-minimal-template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pkcarreno/astro-minimal-template.git"
+  },
   "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node ."
   },
+  "files": [
+    "index.js"
+  ],
   "bin": {
     "create-astro-minimal": "index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "astro",
+    "template",
+    "cli",
+    "minimal"
+  ],
   "dependencies": {
     "consola": "^3.2.3",
     "fs-extra": "^11.2.0"
