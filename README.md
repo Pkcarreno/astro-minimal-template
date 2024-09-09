@@ -20,13 +20,13 @@ Run the following command:
 
 ```bash
 # npm
-npm create @pkcarreno/create-astro-minimal
+npm create @pkcarreno/create-astro-minimal@latest
 
 # yarn
-yarn create @pkcarreno/create-astro-minimal
+yarn create @pkcarreno/create-astro-minimal@latest
 
 # pnpm
-pnpm create @pkcarreno/create-astro-minimal
+pnpm create @pkcarreno/create-astro-minimal@latest
 ```
 
 Then follow the Astro [documentation](https://docs.astro.build/en/getting-started/).
