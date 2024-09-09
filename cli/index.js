@@ -68,8 +68,8 @@ async function setupProject(projectName, tartgetPath) {
   consola.start("Clean up and setup your project");
   try {
     await removeFiles(tartgetPath);
-    await initGit(tartgetPath);
     await updatePackageInfos(projectName, tartgetPath);
+    await initGit(tartgetPath);
     consola.success("Clean up and setup your project");
   } catch (error) {
     consola.error("Failed to clean up project folder", error);
