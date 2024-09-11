@@ -8,13 +8,17 @@ import path from "path";
 const REPO_URL = "https://github.com/Pkcarreno/astro-minimal-template.git";
 
 const FILES_TO_REMOVE = [
-  ".github",
+  ".github/workflows/release.yml",
+  ".github/workflows/publish-to-npmjs.yaml",
   ".git",
   "README.md",
   "cli",
   "LICENSE",
+  "CHANGELOG.md",
   "pnpm-lock.yaml",
 ];
+
+const FILES_PNPM_RELATED = [".github/workflows", ".github/actions"];
 
 async function createAstroMinimal() {
   consola.box("Astro Minimal Template");
@@ -43,11 +47,15 @@ async function createAstroMinimal() {
     process.exit(1);
   }
 
+  const isPnpm = await consola.prompt("Is pnpm your package manager?", {
+    type: "confirm",
+  });
+
   await cloneTemplate(tartgetPath);
 
-  await setupProject(projectName, tartgetPath);
+  await setupProject(projectName, tartgetPath, isPnpm);
 
-  await installDeps(tartgetPath);
+  await installDeps(tartgetPath, isPnpm);
 }
 
 createAstroMinimal();
@@ -64,10 +72,10 @@ async function cloneTemplate(tartgetPath) {
   });
 }
 
-async function setupProject(projectName, tartgetPath) {
+async function setupProject(projectName, tartgetPath, isPnpm) {
   consola.start("Clean up and setup your project");
   try {
-    await removeFiles(tartgetPath);
+    await removeFiles(tartgetPath, isPnpm);
     await updatePackageInfos(projectName, tartgetPath);
     await initGit(tartgetPath);
     consola.success("Clean up and setup your project");
@@ -77,21 +85,29 @@ async function setupProject(projectName, tartgetPath) {
   }
 }
 
-const installDeps = async (projectPath) => {
-  const shouldInstallDependencies = await consola.prompt(
-    "Install dependencies?",
-    {
-      type: "confirm",
-    },
-  );
+const installDeps = async (projectPath, isPnpm) => {
+  if (!isPnpm) {
+    const shouldInstallDependencies = await consola.prompt(
+      "Install dependencies?",
+      {
+        type: "confirm",
+      },
+    );
 
-  if (shouldInstallDependencies) {
-    const packageManager = await consola.prompt("Choose package manager", {
-      type: "select",
-      options: ["npm", "yarn", "pnpm"],
-    });
+    if (shouldInstallDependencies) {
+      const packageManager = await consola.prompt("Choose package manager", {
+        type: "select",
+        options: ["npm", "yarn", "pnpm"],
+      });
 
-    await runCommand(`cd ${projectPath} && ${packageManager} install`, {
+      await runCommand(`cd ${projectPath} && ${packageManager} install`, {
+        loading: "Installing  project dependencies",
+        success: "Dependencies installed",
+        error: "Failed to install dependencies",
+      });
+    }
+  } else {
+    await runCommand(`cd ${projectPath} && pnpm install`, {
       loading: "Installing  project dependencies",
       success: "Dependencies installed",
       error: "Failed to install dependencies",
@@ -99,10 +115,16 @@ const installDeps = async (projectPath) => {
   }
 };
 
-async function removeFiles(projectPath) {
+async function removeFiles(projectPath, isPnpm) {
   FILES_TO_REMOVE.forEach((file) => {
     fs.removeSync(path.join(projectPath, file));
   });
+
+  if (!isPnpm) {
+    FILES_PNPM_RELATED.forEach((file) => {
+      fs.removeSync(path.join(projectPath, file));
+    });
+  }
 }
 
 const initGit = async (projectPath) => {
