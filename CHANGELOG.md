@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.0.1...v1.0.2) (2024-09-21)
+
+
+### Bug Fixes
+
+* **husky:** first commit after initialization was broken ([f9466b7](https://github.com/Pkcarreno/astro-minimal-template/commit/f9466b7d2a3d0d91365b121eb47c7c162494e43f))
+
 ## [1.0.1](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.0.0...v1.0.1) (2024-09-21)
 
 
