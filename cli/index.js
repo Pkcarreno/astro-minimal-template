@@ -15,10 +15,7 @@ const FILES_TO_REMOVE = [
   "cli",
   "LICENSE",
   "CHANGELOG.md",
-  "pnpm-lock.yaml",
 ];
-
-const FILES_PNPM_RELATED = [".github/workflows", ".github/actions"];
 
 async function createAstroMinimal() {
   consola.box("Astro Minimal Template");
@@ -32,11 +29,7 @@ async function createAstroMinimal() {
     process.exit(1);
   }
 
-  const getProjectPath = await consola.prompt("Project path?", {
-    placeholder: `./${projectName}`,
-  });
-
-  const projectPath = getProjectPath || projectName;
+  const projectPath = await getProjectPath(projectName);
 
   const tartgetPath = path.join(process.cwd(), projectPath);
 
@@ -47,18 +40,22 @@ async function createAstroMinimal() {
     process.exit(1);
   }
 
-  const isPnpm = await consola.prompt("Is pnpm your package manager?", {
-    type: "confirm",
-  });
-
   await cloneTemplate(tartgetPath);
 
-  await setupProject(projectName, tartgetPath, isPnpm);
+  await setupProject(projectName, tartgetPath);
 
-  await installDeps(tartgetPath, isPnpm);
+  await installDeps(tartgetPath);
 }
 
 createAstroMinimal();
+
+async function getProjectPath(projectName) {
+  const inputPath = await consola.prompt("Project path?", {
+    placeholder: `./${projectName}`,
+  });
+
+  return inputPath || projectName;
+}
 
 async function cloneTemplate(tartgetPath) {
   consola.start("Cloning template");
@@ -72,10 +69,10 @@ async function cloneTemplate(tartgetPath) {
   });
 }
 
-async function setupProject(projectName, tartgetPath, isPnpm) {
+async function setupProject(projectName, tartgetPath) {
   consola.start("Clean up and setup your project");
   try {
-    await removeFiles(tartgetPath, isPnpm);
+    await removeFiles(tartgetPath);
     await updatePackageInfos(projectName, tartgetPath);
     await initGit(tartgetPath);
     consola.success("Clean up and setup your project");
@@ -85,46 +82,18 @@ async function setupProject(projectName, tartgetPath, isPnpm) {
   }
 }
 
-const installDeps = async (projectPath, isPnpm) => {
-  if (!isPnpm) {
-    const shouldInstallDependencies = await consola.prompt(
-      "Install dependencies?",
-      {
-        type: "confirm",
-      },
-    );
-
-    if (shouldInstallDependencies) {
-      const packageManager = await consola.prompt("Choose package manager", {
-        type: "select",
-        options: ["npm", "yarn", "pnpm"],
-      });
-
-      await runCommand(`cd ${projectPath} && ${packageManager} install`, {
-        loading: "Installing  project dependencies",
-        success: "Dependencies installed",
-        error: "Failed to install dependencies",
-      });
-    }
-  } else {
-    await runCommand(`cd ${projectPath} && pnpm install`, {
-      loading: "Installing  project dependencies",
-      success: "Dependencies installed",
-      error: "Failed to install dependencies",
-    });
-  }
+const installDeps = async (projectPath) => {
+  await runCommand(`cd ${projectPath} && pnpm install`, {
+    loading: "Installing project dependencies",
+    success: "Dependencies installed",
+    error: "Failed to install dependencies, Make sure you have pnpm installed",
+  });
 };
 
-async function removeFiles(projectPath, isPnpm) {
+async function removeFiles(projectPath) {
   FILES_TO_REMOVE.forEach((file) => {
     fs.removeSync(path.join(projectPath, file));
   });
-
-  if (!isPnpm) {
-    FILES_PNPM_RELATED.forEach((file) => {
-      fs.removeSync(path.join(projectPath, file));
-    });
-  }
 }
 
 const initGit = async (projectPath) => {
