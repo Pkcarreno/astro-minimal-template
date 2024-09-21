@@ -12,6 +12,7 @@ const FILES_TO_REMOVE = [
   ".github/workflows/publish-to-npmjs.yaml",
   ".git",
   "README.md",
+  "README-ES.md",
   "cli",
   "LICENSE",
   "CHANGELOG.md",
