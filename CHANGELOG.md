@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.1](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.0.0...v1.0.1) (2024-09-21)
+
+
+### Bug Fixes
+
+* **cli:** add README-ES to files to remove ([a813aa3](https://github.com/Pkcarreno/astro-minimal-template/commit/a813aa335e42aebd1cb1f7be292fea1d459e3cd3))
+* **component:** improve Link component ([e3c9e8e](https://github.com/Pkcarreno/astro-minimal-template/commit/e3c9e8e65844e4a8b17154f5bb95fbb0010f9fe7))
+* **component:** remove Image ([c879287](https://github.com/Pkcarreno/astro-minimal-template/commit/c8792875cbfa8ae97718e478c50ecbc6db61a8e9))
+
 ## 1.0.0 (2024-09-11)
 
 
