@@ -124,10 +124,10 @@ const updateProjectConfig = async (projectPath) => {
 };
 
 const finalMessage = async (projectPath) => {
-  consola.success("Your project is ready to go! \n\n\n");
+  consola.success("\nYour project is ready to go! \n");
   consola.log(
     "To get started, run:\n\n",
-    `  \`cd ${projectPath} && pnpm dev\``,
+    `  \`cd ${projectPath} && pnpm dev\`\n\n`,
   );
 };
 
