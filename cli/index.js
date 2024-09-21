@@ -46,6 +46,8 @@ async function createAstroMinimal() {
   await setupProject(projectName, tartgetPath);
 
   await installDeps(tartgetPath);
+
+  await finalMessage();
 }
 
 createAstroMinimal();
@@ -119,6 +121,14 @@ const updatePackageInfos = async (projectName, projectPath) => {
 const updateProjectConfig = async (projectPath) => {
   const readmeFilePath = path.join(projectPath, `README-PROJECT.md`);
   fs.renameSync(readmeFilePath, path.join(projectPath, `README.md`));
+};
+
+const finalMessage = async (projectPath) => {
+  consola.success("Your project is ready to go! \n\n\n");
+  consola.log(
+    "To get started, run:\n\n",
+    `  \`cd ${projectPath} && pnpm dev\``,
+  );
 };
 
 const execShellCommand = (cmd) => {
