@@ -75,6 +75,7 @@ async function setupProject(projectName, tartgetPath) {
   try {
     await removeFiles(tartgetPath);
     await updatePackageInfos(projectName, tartgetPath);
+    await updateProjectConfig(tartgetPath);
     await initGit(tartgetPath);
     consola.success("Clean up and setup your project");
   } catch (error) {
@@ -113,6 +114,11 @@ const updatePackageInfos = async (projectName, projectPath) => {
     url: "git+https://github.com/user/repo-name.git",
   };
   fs.writeJsonSync(packageJsonPath, packageJson, { spaces: 2 });
+};
+
+const updateProjectConfig = async (projectPath) => {
+  const readmeFilePath = path.join(projectPath, `README-PROJECT.md`);
+  fs.renameSync(readmeFilePath, path.join(projectPath, `README.md`));
 };
 
 const execShellCommand = (cmd) => {
