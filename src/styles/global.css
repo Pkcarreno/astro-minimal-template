@@ -32,6 +32,6 @@
   }
 
   a.link.is-active {
-    @apply bg-muted text-muted-foreground decoration-solid hover:text-muted-foreground/70;
+    @apply text-muted-foreground hover:text-muted-foreground/70;
   }
 }

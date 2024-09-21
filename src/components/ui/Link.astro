@@ -1,9 +1,10 @@
 ---
 import path from "node:path";
 
-import type { LinkProps } from "./Link.type.ts";
+import type { HTMLAttributes } from "astro/types";
+import { encode } from "js-base64";
 
-type Props = LinkProps;
+type Props = HTMLAttributes<"a">;
 
 const { ...props } = Astro.props;
 
@@ -48,7 +49,7 @@ if (isExternal === false && isHash === false) {
 let dataContact: string | null = null;
 if (contact) {
   parsedUrl = "#";
-  dataContact = btoa(href);
+  dataContact = encode(href);
 }
 
 const uniqueId = dataContact
@@ -59,7 +60,7 @@ const uniqueId = dataContact
 <a
   href={parsedUrl}
   class:list={[
-    props.unstyled !== true && {
+    {
       link: true,
       "is-external": isExternal,
       "is-internal": isInternal,
@@ -83,6 +84,7 @@ const uniqueId = dataContact
 >
 
 <script>
+  import { decode } from "js-base64";
   const contactLinks = document.querySelectorAll(".link[unique-id]");
 
   contactLinks.forEach((link) => {
@@ -91,7 +93,7 @@ const uniqueId = dataContact
 
       const contactHrefRaw = link.getAttribute("data-contact");
       if (contactHrefRaw) {
-        const contactHref = atob(contactHrefRaw);
+        const contactHref = decode(contactHrefRaw);
         window.location.href = contactHref;
       }
     });
