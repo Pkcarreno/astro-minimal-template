@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.0.2...v1.1.0) (2024-10-13)
+
+
+### Features
+
+* add robot-txt ([99a682a](https://github.com/Pkcarreno/astro-minimal-template/commit/99a682ada659d849bab83c5611f3d1ad1b40503e))
+
 ## [1.0.2](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.0.1...v1.0.2) (2024-09-21)
 
 
