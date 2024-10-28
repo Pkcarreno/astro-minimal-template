@@ -19,14 +19,14 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.2",
-    "astro": "^4.16.6",
+    "astro": "^4.16.7",
     "astro-font": "^0.1.81",
     "astro-seo": "^0.8.4",
     "tailwindcss": "^3.4.14"
   },
   "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b",
   "devDependencies": {
-    "@astrojs/ts-plugin": "^1.10.3",
+    "@astrojs/ts-plugin": "^1.10.4",
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "astro-robots-txt": "^1.0.0",
@@ -45,6 +45,6 @@
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.33.5",
     "typescript": "^5.6.3",
-    "typescript-eslint": "^8.11.0"
+    "typescript-eslint": "^8.12.0"
   }
 }
