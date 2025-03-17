@@ -19,7 +19,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^6.0.0",
-    "astro": "^5.4.2",
+    "astro": "^5.5.2",
     "astro-font": "^1.0.0",
     "astro-seo": "^0.8.4",
     "tailwindcss": "^3.4.17"
@@ -40,7 +40,7 @@
     "eslint-plugin-unused-imports": "^4.1.4",
     "husky": "^9.1.7",
     "js-base64": "^3.7.7",
-    "lint-staged": "^15.4.3",
+    "lint-staged": "^15.5.0",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.33.5",
