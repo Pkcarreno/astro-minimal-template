@@ -7,6 +7,7 @@ Otra plantilla de Astro.js. Sin páginas por defecto ni componentes de UI, solo 
 ## Características principales
 
 - [TailwindCSS](https://tailwindcss.com/) para el estilizado de la página.
+- [T3 Env](https://env.t3.gg/) para gestionar variables de entorno.
 - TypeScript, ESLint y Prettier para mejorar la calidad del código y prevenir bugs a lo largo del proyecto.
 - Husky y Lint-Staged para ejecutar automatizaciones en ciertos comandos de Git y forzar seguir estándares.
 - Flujos de GitHub Actions para automatizar la gestión del proyecto.
