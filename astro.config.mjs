@@ -5,12 +5,14 @@ import { defineConfig } from "astro/config";
 import favicons from "astro-favicons";
 import robotsTxt from "astro-robots-txt";
 
+import { config } from "./src/config";
+
 // For type-safe environment variables, check this
 // https://docs.astro.build/en/guides/environment-variables/#type-safe-environment-variables
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: config.site,
   env: {
     schema: {
       // API_URL: envField.string({
