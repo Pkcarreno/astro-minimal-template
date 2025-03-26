@@ -1,17 +1,13 @@
 ---
-import Link from "@/components/ui/Link.astro";
-import Base from "@/layouts/Base.astro";
+import Layout from "@/layouts/Layout.astro";
 ---
 
-<Base
+<Layout
   title="Astro"
   description="This is Astro"
   class="flex h-screen flex-col items-center justify-center"
 >
-  <h1>Astro Minimal Template</h1>
-  <small
-    >Made with &lt;3 by <Link href="https://github.com/Pkcarreno"
-      >@pkcarreno</Link
-    ></small
-  >
-</Base>
+  <div class="flex h-full flex-1 items-center justify-center">
+    <span>Astro Minimal Template</span>
+  </div>
+</Layout>

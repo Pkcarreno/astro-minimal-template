@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+  /* colors in okclh format */
   :root {
     --background: 98.46% 0.020808140313168765 91.58194009960602;
     --foreground: 16.59% 0.02 70.51;
@@ -22,16 +23,8 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground selection:bg-foreground selection:text-background font-sans box-border;
+    @apply bg-background text-foreground font-sans box-border;
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
-  }
-
-  a {
-    @apply underline underline-offset-2 hover:text-muted-foreground;
-  }
-
-  a.link.is-active {
-    @apply text-muted-foreground hover:text-muted-foreground/70;
   }
 }

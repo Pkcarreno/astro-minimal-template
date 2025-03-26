@@ -2,6 +2,7 @@
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
+import favicons from "astro-favicons";
 import robotsTxt from "astro-robots-txt";
 
 await import("./src/env/client");
@@ -20,6 +21,7 @@ export default defineConfig({
       applyBaseStyles: false,
       nesting: true,
     }),
+    favicons(),
     robotsTxt(),
     sitemap(),
   ],
