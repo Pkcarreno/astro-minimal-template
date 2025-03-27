@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.2.0](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.1.0...v1.2.0) (2025-03-27)
+
+
+### Features
+
+* add t3 env ([9973aaa](https://github.com/Pkcarreno/astro-minimal-template/commit/9973aaa71ca62e2e19df51190e42c943b1f7599a))
+
+
+### Bug Fixes
+
+* page style ([3b61eae](https://github.com/Pkcarreno/astro-minimal-template/commit/3b61eaecb07d34f6cc8145e6ddfcace746e61bb3))
+* remove vercel refs ([a03529b](https://github.com/Pkcarreno/astro-minimal-template/commit/a03529b1409f8ec5af2a317df40dbcde1e877080))
+* show undefine on final message ([5443a8c](https://github.com/Pkcarreno/astro-minimal-template/commit/5443a8c6bbad6d21dcd5d1b0d20aa2d574ca8295))
+* use env schema from astro ([e2c065a](https://github.com/Pkcarreno/astro-minimal-template/commit/e2c065ab13a342c5cdb0ce1c33257bf187c493ff))
+
 ## [1.1.0](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.0.2...v1.1.0) (2024-10-13)
 
 
