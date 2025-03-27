@@ -7,15 +7,16 @@ Yet another Astro.js template. No default pages or UI components, just base conf
 ## Features
 
 - [TailwindCSS](https://tailwindcss.com/) for styling.
-- [T3 Env](https://env.t3.gg/) for env.
 - TypeScript, ESLint and Prettier to improve code quality and prevent bugs throughout the project.
 - Husky and Lint-Staged to run automations on certain Git commands and force following standards.
 - GitHub Actions workflows to automate project management.
-- Minimal helper libraries:
-  - [astro-seo](https://github.com/jonasmerlin/astro-seo) for easy implementation of important meta tags.
-  - [astro-font](https://github.com/rishi-raj-jain/astro-font/) to import fonts from Google Font or other CDN easily.
-- Generic Link Component based on [astro-link](https://github.com/JulianCataldo/web-garden/tree/develop/components/Link).
+- Minimal helper libraries
+- Generics components
+  - Generic Link Component based on [astro-link](https://github.com/JulianCataldo/web-garden/tree/develop/components/Link).
+- Recommended file organization and layout
 - Astro.js Sitemap integration
+- Astro Favicon integration
+- Astro Robots.txt integration
 
 ## Motivation
 

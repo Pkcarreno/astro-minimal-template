@@ -3,7 +3,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import favicons from "astro-favicons";
-import robotsTxt from "astro-robots-txt";
+import robots from "astro-robots";
 
 import { config } from "./src/config";
 
@@ -38,7 +38,7 @@ export default defineConfig({
       nesting: true,
     }),
     favicons(),
-    robotsTxt(),
+    robots(),
     sitemap(),
   ],
 });
