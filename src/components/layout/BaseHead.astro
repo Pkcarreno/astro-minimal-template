@@ -1,0 +1,16 @@
+---
+import "@/styles/global.css";
+
+import type { ComponentProps } from "astro/types";
+
+import Font from "@/components/generic/Font.astro";
+import Metatags from "@/components/generic/Metatags.astro";
+
+type Props = Pick<ComponentProps<typeof Metatags>, "title" | "description">;
+const { ...props } = Astro.props;
+---
+
+<head>
+  <Metatags {...props} />
+  <Font />
+</head>

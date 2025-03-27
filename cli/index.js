@@ -47,7 +47,7 @@ async function createAstroMinimal() {
 
   await installDeps(tartgetPath);
 
-  await finalMessage();
+  await finalMessage(tartgetPath);
 }
 
 createAstroMinimal();

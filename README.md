@@ -7,6 +7,7 @@ Yet another Astro.js template. No default pages or UI components, just base conf
 ## Features
 
 - [TailwindCSS](https://tailwindcss.com/) for styling.
+- [T3 Env](https://env.t3.gg/) for env.
 - TypeScript, ESLint and Prettier to improve code quality and prevent bugs throughout the project.
 - Husky and Lint-Staged to run automations on certain Git commands and force following standards.
 - GitHub Actions workflows to automate project management.

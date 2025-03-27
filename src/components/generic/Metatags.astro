@@ -1,0 +1,18 @@
+---
+import { localizedHTML as favicons } from "astro-favicons/middleware";
+
+// For a more complete implementation, you can rely on libraries
+// such as `astro-seo` or `astro-seo-meta`.
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<meta charset="utf-8" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<Fragment set:html={favicons(Astro.currentLocale)} />
