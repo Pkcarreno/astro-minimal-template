@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.2.0...v1.3.0) (2025-03-27)
+
+
+### Features
+
+* replace astro robots dep ([d2a30f6](https://github.com/Pkcarreno/astro-minimal-template/commit/d2a30f60d4eedefa90d82c58bb55e87e50a12eea))
+
 ## [1.2.0](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.1.0...v1.2.0) (2025-03-27)
 
 
