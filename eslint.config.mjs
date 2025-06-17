@@ -1,16 +1,32 @@
 import eslint from "@eslint/js";
+import astroEslintParser from "astro-eslint-parser";
 import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginAstro from "eslint-plugin-astro";
+import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
-import tailwind from "eslint-plugin-tailwindcss";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import unusedImports from "eslint-plugin-unused-imports";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-    ignores: ["node_modules/*", "dist/*"],
+    ignores: ["node_modules/*", "dist/*", ".astro"],
+  },
+  {
+    files: ["src/**/*.astro"],
+    languageOptions: {
+      parser: astroEslintParser,
+      parserOptions: {
+        parser: tseslint.parser,
+      },
+    },
+    plugins: {
+      "better-tailwindcss": eslintPluginBetterTailwindcss,
+    },
+    rules: {
+      ...eslintPluginBetterTailwindcss.configs["recommended-warn"].rules,
+    },
   },
   ...eslintPluginAstro.configs["flat/recommended"],
   {
@@ -26,7 +42,11 @@ export default tseslint.config(
         sourceType: "module",
       },
     },
+    plugins: {
+      "better-tailwindcss": eslintPluginBetterTailwindcss,
+    },
     rules: {
+      ...eslintPluginBetterTailwindcss.configs["recommended-warn"].rules,
       "@typescript-eslint/comma-dangle": "off",
       "@typescript-eslint/consistent-type-imports": "error",
       "@typescript-eslint/no-unused-vars": "off",
@@ -90,24 +110,6 @@ export default tseslint.config(
           caughtErrorsIgnorePattern: "^_",
         },
       ],
-    },
-  },
-  ...tailwind.configs["flat/recommended"],
-  {
-    settings: {
-      tailwindcss: {
-        callees: ["cn", "cva"],
-        config: "tailwind.config.mjs",
-      },
-    },
-    rules: {
-      "tailwindcss/classnames-order": [
-        "warn",
-        {
-          officialSorting: true,
-        },
-      ],
-      "tailwindcss/no-custom-classname": "off",
     },
   },
   eslintConfigPrettier,
