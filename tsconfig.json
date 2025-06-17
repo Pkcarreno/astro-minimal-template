@@ -13,6 +13,5 @@
     ]
   },
   "exclude": ["node_modules", "dist"],
-  "include": ["src"]
+  "include": ["src", "lint-staged.config.js", "commitlint.config.js"]
 }
-
