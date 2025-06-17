@@ -8,34 +8,22 @@ importers:
 
   .:
     dependencies:
-      '@astrojs/check':
-        specifier: ^0.9.4
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
-      '@astrojs/sitemap':
-        specifier: ^3.4.1
-        version: 3.4.1
-      astro:
-        specifier: ^5.9.3
-        version: 5.9.3(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0)
       astro-favicons:
         specifier: ^3.1.5
         version: 3.1.5(astro@5.9.3(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0))
-      astro-font:
-        specifier: ^1.1.0
-        version: 1.1.0
-      astro-robots:
-        specifier: ^2.3.1
-        version: 2.3.1(astro@5.9.3(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0))
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
       tailwind-merge:
         specifier: 3.3.1
         version: 3.3.1
-      tailwindcss:
-        specifier: ^4.1.10
-        version: 4.1.10
     devDependencies:
+      '@astrojs/check':
+        specifier: ^0.9.4
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
+      '@astrojs/sitemap':
+        specifier: ^3.4.1
+        version: 3.4.1
       '@astrojs/ts-plugin':
         specifier: ^1.10.4
         version: 1.10.4
@@ -48,9 +36,21 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.1.10
         version: 4.1.10(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))
+      astro:
+        specifier: ^5.9.3
+        version: 5.9.3(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0)
       astro-eslint-parser:
         specifier: ^1.2.2
         version: 1.2.2
+      astro-favicon:
+        specifier: ^0.1.1
+        version: 0.1.1(astro@5.9.3(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0))
+      astro-font:
+        specifier: ^1.1.0
+        version: 1.1.0
+      astro-robots:
+        specifier: ^2.3.1
+        version: 2.3.1(astro@5.9.3(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0))
       eslint:
         specifier: ^9.29.0
         version: 9.29.0(jiti@2.4.2)
@@ -93,6 +93,9 @@ importers:
       sharp:
         specifier: ^0.34.2
         version: 0.34.2
+      tailwindcss:
+        specifier: ^4.1.10
+        version: 4.1.10
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -1201,6 +1204,11 @@ packages:
   astro-eslint-parser@1.2.2:
     resolution: {integrity: sha512-JepyLROIad6f44uyqMF6HKE2QbunNzp3mYKRcPoDGt0QkxXmH222FAFC64WTyQu2Kg8NNEXHTN/sWuUId9sSxw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  astro-favicon@0.1.1:
+    resolution: {integrity: sha512-zmWy3txUu+1zvhdYrMDd40g6krmMUUpxONtcRaVBZ9Nb9CTzwkMbeGEl/skbHWLIKu50xQ220KOs6vYeKjnorw==}
+    peerDependencies:
+      astro: ^5.0.0-beta.0
 
   astro-favicons@3.1.5:
     resolution: {integrity: sha512-XFEW0Yk0sSfFu7WAT5wJ61atbT16YpO3y5n/ooxtys1/Uuv0v2XmMFw8OUrxnykmstUKoa+XjqUw22ph9cFn7A==}
@@ -4386,6 +4394,10 @@ snapshots:
       semver: 7.7.2
     transitivePeerDependencies:
       - supports-color
+
+  astro-favicon@0.1.1(astro@5.9.3(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0)):
+    dependencies:
+      astro: 5.9.3(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0)
 
   astro-favicons@3.1.5(astro@5.9.3(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.8.0)):
     dependencies:
