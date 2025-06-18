@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.4.0](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.3.0...v1.4.0) (2025-06-17)
+
+
+### Features
+
+* improve utility scripts ([55e8172](https://github.com/Pkcarreno/astro-minimal-template/commit/55e8172dc7ecf5cac504db5131a9aec834b23092))
+* migrate tailwindcss to v4 ([f322195](https://github.com/Pkcarreno/astro-minimal-template/commit/f322195e10b26d4af879646a3a1a7f7d4c56096c))
+* migrate to eslint-plugin-better-tailwindcss ([1fefcd8](https://github.com/Pkcarreno/astro-minimal-template/commit/1fefcd8022fef9994bf890292a024f1e0a526559))
+
+
+### Bug Fixes
+
+* ignore .astro folder ([8d2d668](https://github.com/Pkcarreno/astro-minimal-template/commit/8d2d6682e6f975747842687087d0ab3681bb4ba3))
+* move dev deps to where it belongs ([7d034ef](https://github.com/Pkcarreno/astro-minimal-template/commit/7d034efbec5b76cbf8e73d3de807e1a554f2a578))
+
 ## [1.3.0](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.2.0...v1.3.0) (2025-03-27)
 
 
