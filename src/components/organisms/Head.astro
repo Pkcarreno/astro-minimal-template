@@ -1,10 +1,13 @@
 ---
-import "@/styles/global.css";
+
+
+
+import "@/global.css";
 
 import type { ComponentProps } from "astro/types";
 
-import Font from "@/components/generic/Font.astro";
-import Metatags from "@/components/generic/Metatags.astro";
+import Font from "@/components/molecules/Font.astro";
+import Metatags from "@/components/molecules/Metatags.astro";
 
 type Props = Pick<ComponentProps<typeof Metatags>, "title" | "description">;
 const { ...props } = Astro.props;
