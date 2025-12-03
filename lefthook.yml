@@ -2,13 +2,13 @@ pre-commit:
   commands:
     check:
       glob: "*.{astro,js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: pnpm lint -- --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
+      run: pnpx @biomejs/biome check --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
 
 pre-push:
   commands:
     check:
       glob: "*.{astro,js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: pnpm lint -- --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {push_files}
+      run: pnpx @biomejs/biome check --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {push_files}
 
 post-merge:
   commands:
