@@ -1,12 +1,12 @@
 pre-commit:
   commands:
-    check:
+    "check staged files files":
       glob: "*.{astro,js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
       run: pnpx @biomejs/biome check --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
 
 pre-push:
   commands:
-    check:
+    "check pushed files files":
       glob: "*.{astro,js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
       run: pnpx @biomejs/biome check --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {push_files}
 
