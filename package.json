@@ -13,16 +13,14 @@
     "type-check": "tsc --project tsconfig.json --noEmit",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
-    "lint-staged": "lint-staged",
-    "commitlint": "commitlint",
-    "prepare": "husky"
+    "commitlint": "commitlint"
   },
   "dependencies": {
     "astro-favicons": "^3.1.5",
     "clsx": "^2.1.1",
     "tailwind-merge": "3.3.1"
   },
-  "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b",
+  "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a",
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/sitemap": "^3.6.0",
@@ -34,11 +32,15 @@
     "astro": "^5.14.1",
     "astro-font": "^1.1.0",
     "astro-robots": "^2.3.1",
-    "husky": "^9.1.7",
     "js-base64": "^3.7.8",
-    "lint-staged": "^16.2.3",
+    "lefthook": "^2.0.7",
     "sharp": "^0.34.4",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "lefthook"
+    ]
   }
 }
