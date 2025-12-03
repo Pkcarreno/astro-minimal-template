@@ -20,6 +20,5 @@ And open the [localhost:4321](localhost:4321) page.
 
 - [Astro.js](https://docs.astro.build/en/getting-started/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [ESLint](https://eslint.org/)
-- [Husky](https://github.com/typicode/husky)
+- [Biome](https://biomejs.dev/)
 - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
