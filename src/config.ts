@@ -1,3 +1,3 @@
 export const config = {
-  site: "https://example.com",
-};
+	site: 'https://example.com'
+}
