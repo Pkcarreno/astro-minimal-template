@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.5.0](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.4.0...v1.5.0) (2025-12-03)
+
+
+### Features
+
+* **dx:** migrate linter to biome ([6e8d497](https://github.com/Pkcarreno/astro-minimal-template/commit/6e8d4974b2415b82090a71dec8329618dac7487d))
+* **dx:** migrate to lefthook ([70c4665](https://github.com/Pkcarreno/astro-minimal-template/commit/70c4665edc2b8804b9b6093c97bb805ce771f89b))
+* **dx:** tweak structure ([ba3eb3c](https://github.com/Pkcarreno/astro-minimal-template/commit/ba3eb3c94c243a6510b24b874c2ecd259aaf8957))
+
+
+### Bug Fixes
+
+* **dx:** add biome reviewdog ([4f66f34](https://github.com/Pkcarreno/astro-minimal-template/commit/4f66f3460a0bba9e8ff631dabefa059c58246fa4))
+* **dx:** fix hook biome command ([3687ab3](https://github.com/Pkcarreno/astro-minimal-template/commit/3687ab34fc1b9e05a5a78dd337123d437e2939ea))
+* **dx:** improve command names ([babeb26](https://github.com/Pkcarreno/astro-minimal-template/commit/babeb269c99341e19ce845d161e4759152607fe1))
+* **dx:** lefthook commands name ([109fd9a](https://github.com/Pkcarreno/astro-minimal-template/commit/109fd9a907fd00de5f8e3fc1a5970805b32c2bc5))
+* **dx:** remove d.ts unused file ([f65aec1](https://github.com/Pkcarreno/astro-minimal-template/commit/f65aec1b97488d3702d05adc7a48bc464287d6e4))
+* **dx:** remove wrong dep ([7828bd2](https://github.com/Pkcarreno/astro-minimal-template/commit/7828bd2d3972d69f4d547d544b7966f1e8c381e0))
+* remove opinionated link component ([745c2df](https://github.com/Pkcarreno/astro-minimal-template/commit/745c2df5cf78d55b26642de1a58c458b7262c641))
+* update readme ([af4f52a](https://github.com/Pkcarreno/astro-minimal-template/commit/af4f52a5ee948c9b411060e6fa9e77ae644db77c))
+
 ## [1.4.0](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.3.0...v1.4.0) (2025-06-17)
 
 
