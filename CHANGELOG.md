@@ -1,5 +1,32 @@
 # Changelog
 
+## [2.0.0](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.5.0...v2.0.0) (2026-01-13)
+
+
+### Features
+
+* **cli:** remove internal cli ([74df666](https://github.com/Pkcarreno/astro-minimal-template/commit/74df666ba3e708027906b899c0317f6447fa7ba9))
+* **readme:** improve doc ([65a37eb](https://github.com/Pkcarreno/astro-minimal-template/commit/65a37ebf507dc8a7bcac582c825423c0a9e96bc5))
+* simplify content ([37d043d](https://github.com/Pkcarreno/astro-minimal-template/commit/37d043dc97abaca57bff78599b11d3a25390f73e))
+* tweak dx tools ([4e44c5f](https://github.com/Pkcarreno/astro-minimal-template/commit/4e44c5f6907415e28f0628349e639cee60036227))
+
+
+### Bug Fixes
+
+* change astro config file extension ([abaef4a](https://github.com/Pkcarreno/astro-minimal-template/commit/abaef4a0529f9d7b547b62a8bd3588c896fbab48))
+* ci workflow ([6d8523f](https://github.com/Pkcarreno/astro-minimal-template/commit/6d8523f480b314fe3a9b4f61cbfe461762d35f80))
+* **ci:** avoid running checks before release ([6acdc78](https://github.com/Pkcarreno/astro-minimal-template/commit/6acdc78a39887f6108e788c24c7b375844fc3edf))
+* **ci:** make checks run only on PR ([fcd2791](https://github.com/Pkcarreno/astro-minimal-template/commit/fcd2791ece23e9f12479b44802a5789e563ea002))
+* remove unused dep ([62fb6cc](https://github.com/Pkcarreno/astro-minimal-template/commit/62fb6cc9f7b083c7ebd58b9191f3e9646f5433e0))
+* remove unused files ([a1ad0d8](https://github.com/Pkcarreno/astro-minimal-template/commit/a1ad0d8a6f48ed4dea3bc589ca3e19a71df4d86a))
+* remove unwanted dir ([cb6f7f9](https://github.com/Pkcarreno/astro-minimal-template/commit/cb6f7f9682ccd21bd60b974bbf596c332638f489))
+* safety nets ([70964fd](https://github.com/Pkcarreno/astro-minimal-template/commit/70964fd5634140fb8adcfe6626de500c9dd6b9eb))
+
+
+### Miscellaneous Chores
+
+* release 2.0.0 ([fdaefcb](https://github.com/Pkcarreno/astro-minimal-template/commit/fdaefcbb380ae7d5d5b6ed0d228552a3e61407de))
+
 ## [1.5.0](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.4.0...v1.5.0) (2025-12-03)
 
 
