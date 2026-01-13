@@ -1,14 +1,19 @@
 ---
-
-import Layout from "@/components/layout/BaseLayout.astro";
+import "@/global.css";
 ---
 
-<Layout
-  title="Astro"
-  description="This is Astro"
-  class="flex h-screen flex-col items-center justify-center"
->
-  <div class="flex h-full flex-1 items-center justify-center">
-    <span>Astro Minimal Template</span>
-  </div>
-</Layout>
+<!doctype html>
+<html lang="es" class="m-0 h-full">
+  <head>
+    <meta charset="utf-8">
+    <title>demo page</title>
+    <meta name="description" content="TODO: edit this description">
+  </head>
+  <body class="flex h-screen flex-col items-center justify-center">
+    <main class="h-full flex-1">
+      <div class="flex h-full flex-1 items-center justify-center">
+        <span>Astro Minimal Template</span>
+      </div>
+    </main>
+  </body>
+</html>
