@@ -1,40 +1,28 @@
 @import "tailwindcss";
 
 @layer base {
-	/* colors in okclh format */
-	:root {
-		--background: oklch(98.46% 0.020808140313168765 91.58194009960602);
-		--foreground: oklch(16.59% 0.02 70.51);
-		--muted: oklch(95.54% 0.004 69.61);
-		--muted-foreground: oklch(41.44% 0.016 69.24);
-	}
+  :root {
+    --background: #fffaeb;
+    --text: #4c453b;
+  }
 
-	@media (prefers-color-scheme: dark) {
-		:root {
-			--background: oklch(17.12% 0.035 95.39);
-			--foreground: oklch(98.59% 0.003 69.62);
-			--muted: oklch(21.87% 0.009 69.2);
-			--muted-foreground: oklch(77.77% 0.013 69.47);
-		}
-	}
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #140f00;
+      --text: #bbb1a5;
+    }
+  }
 }
 
 @theme {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-
-	--color-muted: var(--muted);
-	--color-muted-foreground: var(--muted-foreground);
-
-	--font-sans:
-		Noto Sans, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-		"Segoe UI Symbol", "Noto Color Emoji";
+  --color-background: var(--background);
+  --color-text: var(--text);
 }
 
 @layer base {
-	body {
-		@apply bg-background text-foreground font-sans box-border;
-		font-synthesis-weight: none;
-		text-rendering: optimizeLegibility;
-	}
+  body {
+    @apply bg-background text-text;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
 }
