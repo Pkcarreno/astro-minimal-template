@@ -15,7 +15,6 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: ./.github/workflows/check.yml
       - uses: googleapis/release-please-action@v4
         id: release
         with:
