@@ -48,4 +48,4 @@ If your Astro configuration relies on environment variables, ensure they are def
 
 ### CI/CD workflows not triggering
 
-The default workflows are configured to trigger on `main` or `master` branches. If you are using a different branch name, update the `on: push: branches:` section in the `.github/workflows` files.
+The default workflows are configured to trigger on `main` or `master` branches. If you are using a different branch name, update the `on: pull_request: branches:` section in the `.github/workflows` files.
