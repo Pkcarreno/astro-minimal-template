@@ -1,23 +1,35 @@
 pre-commit:
-  commands:
-    "check staged files":
-      glob: "*.{astro,js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: pnpx @biomejs/biome check --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
+  jobs:
+    - run: pnpm dlx ultracite fix {staged_files}
+      glob:
+        - "*.js"
+        - "*.jsx"
+        - "*.ts"
+        - "*.tsx"
+        - "*.json"
+        - "*.jsonc"
+        - "*.css"
+        - "*.astro"
+      stage_fixed: true
 
 pre-push:
-  commands:
-    "check pushed files":
-      glob: "*.{astro,js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: pnpx @biomejs/biome check --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {push_files}
+  jobs:
+    - run: pnpm dlx ultracite check {push_files}
+      glob:
+        - "*.js"
+        - "*.jsx"
+        - "*.ts"
+        - "*.tsx"
+        - "*.json"
+        - "*.jsonc"
+        - "*.css"
+        - "*.astro"
 
 post-merge:
-  commands:
-    "pnpm-lock.yml changed":
-      run: git diff --name-only HEAD@{1} HEAD | grep "pnpm-lock.yml" >/dev/null 2>&1
-    "pnpm install":
-      run: pnpm install
+  jobs:
+    - run: pnpm install
+      glob: "pnpm-lock.yml"
 
 commit-msg:
-  commands:
-    "lint commit message":
-      run: pnpm commitlint --edit {1}
+  jobs:
+    - run: pnpm commitlint --edit {1}
