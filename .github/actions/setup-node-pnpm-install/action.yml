@@ -1,5 +1,3 @@
-# Taken from obytes' react native template: https://github.com/obytes/react-native-template-obytes
-
 name: "Setup  Node + PNPM + Install Dependencies"
 description: "Setup  Node + PNPM + Install Dependencies"
 runs:
@@ -11,6 +9,6 @@ runs:
       with:
         cache: "pnpm"
 
-    - name: 📦 Install Project Dependencies
+    - name: Install Project Dependencies
       run: pnpm install --frozen-lockfile
       shell: bash
