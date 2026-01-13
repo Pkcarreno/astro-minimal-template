@@ -42,9 +42,6 @@ importers:
       astro:
         specifier: ^5.14.1
         version: 5.16.4(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2)
-      astro-font:
-        specifier: ^1.1.0
-        version: 1.1.0
       astro-robots:
         specifier: ^2.3.1
         version: 2.3.1(astro@5.16.4(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2))
@@ -1087,9 +1084,6 @@ packages:
     resolution: {integrity: sha512-XFEW0Yk0sSfFu7WAT5wJ61atbT16YpO3y5n/ooxtys1/Uuv0v2XmMFw8OUrxnykmstUKoa+XjqUw22ph9cFn7A==}
     peerDependencies:
       astro: '>= 4.0.0'
-
-  astro-font@1.1.0:
-    resolution: {integrity: sha512-hj1A0MkaJTeaArBpf1m9s4Nxu1Bn9h0QiEPeR9Dfjle25pT4CH4higzuadWzCRSvhGO2SzbM11YwZEF+cmLDxg==}
 
   astro-robots@2.3.1:
     resolution: {integrity: sha512-ocYIVPBVRBp0zeIVQ9o8PiQThkTmccZWlPKJXtgfC6dsrPwNtKOwbLtH+X4COoJhliwVEO2uzQy6bAFSSSwzcA==}
@@ -3664,8 +3658,6 @@ snapshots:
       astro: 5.16.4(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2)
       favilib: 1.0.5
       ultrahtml: 1.6.0
-
-  astro-font@1.1.0: {}
 
   astro-robots@2.3.1(astro@5.16.4(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2)):
     dependencies:
