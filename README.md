@@ -5,8 +5,15 @@ Minimal Astro template. Prioritizes efficient development workflows and high-per
 ## usage
 
 ```bash
-pnpm dlx @pkcarreno/create-astro-minimal <project-name>
+pnpm dlx @pkcarreno/create-astro-minimal@latest <project-name>
 ```
+
+### manual setup
+
+1. Clone this repository.
+2. Delete `CHANGELOG.md` file.
+3. Update the `name` field in `package.json`.
+4. Run `pnpm install`.
 
 ## workflow
 
