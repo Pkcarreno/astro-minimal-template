@@ -28,7 +28,7 @@ pre-push:
 post-merge:
   jobs:
     - run: pnpm install
-      glob: "pnpm-lock.yml"
+      glob: "pnpm-lock.yaml"
 
 commit-msg:
   jobs:
