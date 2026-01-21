@@ -1,29 +1,15 @@
 pre-commit:
   jobs:
-    - run: pnpm dlx ultracite fix {staged_files}
-      glob:
-        - "*.js"
-        - "*.jsx"
-        - "*.ts"
-        - "*.tsx"
-        - "*.json"
-        - "*.jsonc"
-        - "*.css"
-        - "*.astro"
+    - run: pnpm check
+      glob: "*.{js,jsx,ts,tsx,json,jsonc,css,astro}"
+    - run: pnpm lint:fix {staged_files}
+      glob: "*.{js,jsx,ts,tsx,json,jsonc,css,astro}"
       stage_fixed: true
 
 pre-push:
   jobs:
-    - run: pnpm dlx ultracite check {push_files}
-      glob:
-        - "*.js"
-        - "*.jsx"
-        - "*.ts"
-        - "*.tsx"
-        - "*.json"
-        - "*.jsonc"
-        - "*.css"
-        - "*.astro"
+    - run: pnpm lint:fix {push_files}
+      glob: "*.{js,jsx,ts,tsx,json,jsonc,css,astro}"
 
 post-merge:
   jobs:
