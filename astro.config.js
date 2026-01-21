@@ -1,9 +1,6 @@
 // @ts-check
-import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
-import favicons from "astro-favicons";
-import robots from "astro-robots";
 
 const site = "https://example.org";
 
@@ -26,7 +23,6 @@ export default defineConfig({
   },
   compressHTML: true,
   prefetch: true,
-  integrations: [favicons(), robots(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },
