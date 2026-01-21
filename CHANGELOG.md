@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.1](https://github.com/Pkcarreno/astro-minimal-template/compare/v2.0.0...v2.0.1) (2026-01-21)
+
+
+### Bug Fixes
+
+* glob pattern of post-merge job ([5117d66](https://github.com/Pkcarreno/astro-minimal-template/commit/5117d66769a4a65f72d5a3020a0f1dc5e533dc92))
+* use local scripts ([e7674ef](https://github.com/Pkcarreno/astro-minimal-template/commit/e7674ef1c76b1dc39e6023d010e082948c133762))
+
 ## [2.0.0](https://github.com/Pkcarreno/astro-minimal-template/compare/v1.5.0...v2.0.0) (2026-01-13)
 
 
