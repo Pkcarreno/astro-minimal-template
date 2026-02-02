@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/Pkcarreno/astro-minimal-template/compare/v2.0.2...v2.0.3) (2026-02-02)
+
+
+### Bug Fixes
+
+* improve post-merge behavior ([f059740](https://github.com/Pkcarreno/astro-minimal-template/commit/f059740db23ca14d63e7e1c74b80f802dad24c7d))
+
 ## [2.0.2](https://github.com/Pkcarreno/astro-minimal-template/compare/v2.0.1...v2.0.2) (2026-01-21)
 
 
