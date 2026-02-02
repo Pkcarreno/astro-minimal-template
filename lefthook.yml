@@ -1,6 +1,6 @@
 pre-commit:
   jobs:
-    - run: pnpm check
+    - run: pnpm tsc
       glob: "*.{js,jsx,ts,tsx,json,jsonc,css,astro}"
     - run: pnpm lint:fix {staged_files}
       glob: "*.{js,jsx,ts,tsx,json,jsonc,css,astro}"
