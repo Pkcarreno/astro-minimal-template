@@ -6,11 +6,10 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "astro check",
-    "tsc": "tsc",
+    "tsc": "astro sync && astro check",
     "lint": "ultracite check",
     "lint:fix": "ultracite fix",
     "commitlint": "commitlint",
