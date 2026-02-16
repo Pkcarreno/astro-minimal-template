@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.4](https://github.com/Pkcarreno/astro-minimal-template/compare/v2.0.3...v2.0.4) (2026-02-16)
+
+
+### Bug Fixes
+
+* pre push workflow should not make changes to codebase ([20c983e](https://github.com/Pkcarreno/astro-minimal-template/commit/20c983efa26e3a403c93af0232538c034d1613b0))
+* pre push workflow should not make changes to codebase ([1aa7429](https://github.com/Pkcarreno/astro-minimal-template/commit/1aa74297dc31dbceb505b76d0cefe88507e1154d))
+
 ## [2.0.3](https://github.com/Pkcarreno/astro-minimal-template/compare/v2.0.2...v2.0.3) (2026-02-02)
 
 
