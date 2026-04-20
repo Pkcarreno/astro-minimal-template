@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.5](https://github.com/Pkcarreno/astro-minimal-template/compare/v2.0.4...v2.0.5) (2026-04-20)
+
+
+### Bug Fixes
+
+* update actions ([ed88a5b](https://github.com/Pkcarreno/astro-minimal-template/commit/ed88a5badfff3d755bb6df9b8a1e105d6f77045a))
+
 ## [2.0.4](https://github.com/Pkcarreno/astro-minimal-template/compare/v2.0.3...v2.0.4) (2026-02-16)
 
 
