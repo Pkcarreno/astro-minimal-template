@@ -18,21 +18,21 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "tailwind-merge": "3.5.0"
+    "tailwind-merge": "3.6.0"
   },
   "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a",
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "@astrojs/ts-plugin": "^1.10.7",
-    "@biomejs/biome": "^2.4.14",
-    "@commitlint/cli": "^20.5.3",
-    "@commitlint/config-conventional": "^20.5.3",
-    "@tailwindcss/vite": "^4.2.4",
-    "astro": "^6.2.1",
-    "lefthook": "^2.1.6",
-    "tailwindcss": "^4.2.4",
+    "@astrojs/ts-plugin": "^1.10.9",
+    "@biomejs/biome": "^2.4.16",
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.4.3",
+    "lefthook": "^2.1.9",
+    "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3",
-    "ultracite": "7.6.2"
+    "ultracite": "7.8.1"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
